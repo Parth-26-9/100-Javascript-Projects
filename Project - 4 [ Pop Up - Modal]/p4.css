@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(1, 1, 22);
+  color: white;
+}
+.container {
+  width: 500px;
+  height: 300px;
+  border: 0.5rem solid white;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+.heading {
+  text-decoration: underline;
+}
+.number {
+  font-size: 10rem;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+button {
+  font-size: 3rem;
+  width: 30rem;
+  cursor: pointer;
+}
+.animalDetails {
+  width: 100rem;
+  border: 0.5rem solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+  z-index: 1;
+  animation: slide ease 1;
+  display: none;
+}
+img {
+  width: 25rem;
+  height: 20rem;
+}
+.animalDetail {
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.5rem solid white;
+  gap: 2rem;
+  padding: 1rem;
+}
+@keyframes slide {
+  
+  0%{
+    transform: translateY(-30);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.slide-up
+{
+  animation: slide-up ease 1;
+}
+@keyframes slide-up{
+  0%{
+      transform: translateY(0);
+  }
+  100%{
+      transform: translateY(-50rem);
+  }
+}

@@ -1,0 +1,43 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 62.5%;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-top: 30rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    border: .5rem solid black;
+    padding: 3rem;
+}
+.box{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+button{
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: 900;
+}
+input{
+    padding: 1rem;
+    font-size: 2rem;
+}

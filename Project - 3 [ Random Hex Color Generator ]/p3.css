@@ -1,0 +1,50 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container
+{
+    width: 500px;
+    height: 250px;
+    border: .5rem solid black;
+    margin-top: 300px;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+.heading{
+    text-decoration: underline;
+}
+.number
+{
+    font-size: 10rem;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+button
+{
+    font-size: 3rem;
+    width: 30rem;
+    cursor: pointer;
+}
+input{
+    padding: 1rem;
+    text-transform: lowercase;
+}
