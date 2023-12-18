@@ -1,0 +1,17 @@
+const [location, SetLocation] = useState(resObj);
+
+const FilterButton = () => {
+    
+    const filterByLocation = (location) =>{
+      const filterData = resObj.filter((res)=>res.address === location)
+      SetLocation(filterData)
+    }
+
+<button
+          className="filterBtn"
+          onClick={() => {
+              filterByLocation("GUJARAT")
+          }}
+        >
+          GUJARAT
+        </button>

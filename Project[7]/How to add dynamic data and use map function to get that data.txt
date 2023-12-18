@@ -1,0 +1,75 @@
+import React from "react";
+import "./Hb.css";
+import {AiFillStar} from 'react-icons/ai'
+
+function HB() {
+  const resObj = [
+      {
+        image:"https://t4.ftcdn.net/jpg/03/05/35/65/360_F_305356563_RjpA8bNIfjd2s78JpTt3Ed6hKWPUBOwS.jpg",
+        name:"Pani Puri",
+        address:"Gujarat",
+        rating:"4.5",
+        number:'1'
+      },
+      {
+        image:"https://t4.ftcdn.net/jpg/03/05/35/65/360_F_305356563_RjpA8bNIfjd2s78JpTt3Ed6hKWPUBOwS.jpg",
+        name:"Puri",
+        address:"Gujarat",
+        rating:"4.5",
+        number:'2'
+        
+      },
+      {
+        image:"https://t4.ftcdn.net/jpg/03/05/35/65/360_F_305356563_RjpA8bNIfjd2s78JpTt3Ed6hKWPUBOwS.jpg",
+        name:"Pani",
+        address:"Gujarat",
+        rating:"4.5",
+        number:'3'
+      } 
+  ]
+  const Card = (props) => {
+
+    const {resData} = props;
+    
+    const {address,image,name,rating} = resData
+
+    return (
+      <div className="card">
+        <img src={image} alt="" className="cardImg" />
+         <h1>{name}</h1>
+         <h2>{address}</h2>
+         <h2 className="star">{rating}</h2>
+        <h2 className="star"><AiFillStar/> 4.4</h2>
+       </div>
+    );
+  };
+  const CardLobby = () => {
+    return (
+      <>
+        <div className="cardSection">
+          {
+            resObj.map(resto => <Card key={resto.number}  resData={resto} />)
+          }
+        </div>
+      </>
+    );
+  };
+  const SearchBar = () => {
+    return (
+      <div className="search">
+        <input type="text" />
+        <button className="btn">Enter</button>
+      </div>
+    );
+  };
+ 
+
+  return (
+    <div className="homeBody">
+      <SearchBar />
+      <CardLobby />
+    </div>
+  );
+}
+
+export default HB;

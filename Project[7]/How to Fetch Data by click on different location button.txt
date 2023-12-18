@@ -1,0 +1,23 @@
+const FilterButton = () => {
+    const filterByLocation = async (location) => {
+      const response = await fetch(
+        `https://6571bdbed61ba6fcc0136a17.mockapi.io/foodApi?address=${location}`
+      );
+      const jsonData = await response.json();
+      setData(jsonData);
+    };
+
+    return (
+      <div className="buttons">
+        <button className="filterBtn" onClick={() => filterByLocation("GUJARAT")}>
+          GUJARAT
+        </button>
+        <button className="filterBtn" onClick={() => filterByLocation("RAJASTHAN")}>
+          RAJASTHAN
+        </button>
+        <button className="filterBtn" onClick={() => filterByLocation("BANGALORE")}>
+          BANGALORE
+        </button>
+      </div>
+    );
+  };
